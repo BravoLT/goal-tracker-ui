@@ -6,10 +6,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GoalComponent } from './goal/goal.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GoalComponent
   ],
   imports: [
     MaterialModule,
