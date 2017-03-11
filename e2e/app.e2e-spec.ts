@@ -1,6 +1,6 @@
 import { GoalTrackerUiPage } from './app.po';
 
-describe('goal-tracker-ui App', function() {
+describe('goal-tracker-ui App', () => {
   let page: GoalTrackerUiPage;
 
   beforeEach(() => {
