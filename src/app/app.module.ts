@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GoalListComponent } from './goal-list/goal-list.component';
 import { GoalComponent } from './goal/goal.component';
+import { GoalService } from './goal.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { GoalComponent } from './goal/goal.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    GoalService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

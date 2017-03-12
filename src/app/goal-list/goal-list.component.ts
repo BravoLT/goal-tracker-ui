@@ -5,8 +5,7 @@ import { GoalService } from '../goal.service'
 @Component({
   selector: 'goal-list',
   templateUrl: './goal-list.component.html',
-  styleUrls: ['./goal-list.component.css'],
-  providers: [GoalService]
+  styleUrls: ['./goal-list.component.css']
 })
 export class GoalListComponent implements OnInit {
 
@@ -21,5 +20,4 @@ export class GoalListComponent implements OnInit {
   getGoals(): void {
     this.goalService.getGoals().subscribe( goals => this.goals = goals);
   }
-
 }
