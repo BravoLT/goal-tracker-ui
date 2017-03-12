@@ -23,15 +23,4 @@ describe('GoalComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should be 0% complete', () => {
-     component.done = false;
-     
-     expect(component.percentComplete).toBe(0)
-  });
-
-  it('should be 100% complete', () => {
-     component.done = true;
-     
-     expect(component.percentComplete).toBe(1)
-  });
 });
