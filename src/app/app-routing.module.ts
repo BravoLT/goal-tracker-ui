@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GoalComponent } from './goal/goal.component'
+import { GoalListComponent } from './goal-list/goal-list.component'
 
 const routes: Routes = [
   {
@@ -8,8 +8,8 @@ const routes: Routes = [
     children: []
   },
   {
-    path: 'goal',
-    component: GoalComponent,
+    path: 'goals',
+    component: GoalListComponent,
     children: []
   }
 ];
