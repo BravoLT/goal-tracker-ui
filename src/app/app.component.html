@@ -1,4 +1,10 @@
-<h1>
-  {{title}}
-</h1>
-<router-outlet></router-outlet>
+<md-toolbar>{{title}}</md-toolbar>
+<md-sidenav-container class="main">
+  <md-sidenav #sidenav mode="side" opened="true">
+    <md-list>
+      <md-list-item>My Goal</md-list-item>
+      <md-list-item>All Goals</md-list-item>
+    </md-list>
+  </md-sidenav>
+  <router-outlet></router-outlet>
+</md-sidenav-container>
