@@ -21,4 +21,5 @@ export class GoalComponent implements OnInit {
   getGoals(): void {
     this.goalService.getGoals().then( goals => this.goals = goals);
   }
+
 }
