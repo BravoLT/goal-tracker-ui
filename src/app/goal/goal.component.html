@@ -1,0 +1,21 @@
+<h1>
+  <a (click)="goBack()"><md-icon>arrow_back</md-icon></a>
+  Goal
+</h1>
+<md-input-container>
+  <input mdInput required [(ngModel)]="goal.description" #desc="ngModel" type="text" placeholder="Description" />
+</md-input-container>
+<br />
+<md-input-container>
+  <input mdInput [(ngModel)]="goal.start" #start="ngModel" type="datetime-local" placeholder="Start Date" />
+</md-input-container>
+<br />
+<md-input-container>
+  <input mdInput [(ngModel)]="goal.end" #end="ngModel" type="datetime-local" placeholder="Target Date" />
+</md-input-container>
+<br />
+<md-select placeholder="Owner">
+  <md-option *ngFor="let owner of owners" [value]="goal.owner.id">
+    {{goal.owner?.name}}
+  </md-option>
+</md-select>

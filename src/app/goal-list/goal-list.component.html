@@ -1,4 +1,10 @@
- GOALS:
-<ul>
-  <li *ngFor="let goal of goals">{{goal?.owner.name}} will {{goal.description}} by {{goal.end}} </li>
-</ul>
+<md-list>
+  <h1 md-subheader>
+    Goals
+  </h1>
+  <md-list-item *ngFor="let goal of goals">
+    <md-icon md-list-avatar>done</md-icon><!-- cancel -->
+    <h4 md-line><a [routerLink]="['/goal', goal.id]">{{goal.description}}</a></h4>
+    <p md-line>{{goal.owner?.name}} by {{goal.end}}</p>
+  </md-list-item>
+</md-list>

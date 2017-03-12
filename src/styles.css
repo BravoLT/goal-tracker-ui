@@ -1,2 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.mat-nav-list .mat-list-item.active {
+    background-color: #673ab7;
+    color: rgba(255,255,255,.87);
+}
