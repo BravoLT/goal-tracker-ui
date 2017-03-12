@@ -8,7 +8,7 @@ import { GoalService } from '../goal.service'
   styleUrls: ['./goal-list.component.css'],
   providers: [GoalService]
 })
-export class GoalComponent implements OnInit {
+export class GoalListComponent implements OnInit {
 
   goals: Goal[]
 

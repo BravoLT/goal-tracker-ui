@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GoalComponent } from './goal-list.component';
+import { GoalListComponent } from './goal-list.component';
 
-describe('GoalComponent', () => {
-  let component: GoalComponent;
-  let fixture: ComponentFixture<GoalComponent>;
+describe('GoalListComponent', () => {
+  let component: GoalListComponent;
+  let fixture: ComponentFixture<GoalListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GoalComponent ]
+      declarations: [ GoalListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GoalComponent);
+    fixture = TestBed.createComponent(GoalListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -23,15 +23,4 @@ describe('GoalComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should be 0% complete', () => {
-     component.done = false;
-     
-     expect(component.percentComplete).toBe(0)
-  });
-
-  it('should be 100% complete', () => {
-     component.done = true;
-     
-     expect(component.percentComplete).toBe(1)
-  });
 });
