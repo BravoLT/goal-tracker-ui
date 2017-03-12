@@ -5,5 +5,5 @@ export class Goal {
   description: string
   start: string
   end: string
-  who: Owner
+  owner: Owner
 }

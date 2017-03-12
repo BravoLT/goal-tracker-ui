@@ -19,7 +19,7 @@ export class GoalListComponent implements OnInit {
   }
 
   getGoals(): void {
-    this.goalService.getGoals().then( goals => this.goals = goals);
+    this.goalService.getGoals().subscribe( goals => this.goals = goals);
   }
 
 }

@@ -1,21 +1,19 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 import { Goal } from './goal';
 
 @Injectable()
 export class GoalService {
+  private goalServiceUrl ='http://localhost:8080/goals'
 
-  goals: Goal[]
-
-  constructor() { 
-    this.goals = [
-      {id:"1", description: "Do some ok stuff", start: "3/1/2017", end: "3/31/2017", who: {id:"own1", name: "Mike"}},
-      {id:"2", description: "Do some amazing stuff", start: "3/1/2017", end: "3/31/2017", who: {id:"own1", name: "Dave"}},
-      {id:"3", description: "Do some cool stuff", start: "4/1/2017", end: "4/30/2017", who: {id:"own1", name: "Dustin"}},
-      {id:"4", description: "Do some awesome stuff", start: "4/1/2017", end: "5/31/2017", who: {id:"own1", name: "Nick"}}
-    ];
+  constructor(private http: Http) { 
   }
 
-  getGoals() : Promise<Goal[]> {
-    return Promise.resolve(this.goals)
+  getGoals() : Observable<Goal[]> {
+    return this.http.get(this.goalServiceUrl)
+              .map(res => res.json())
+              .catch(error => Observable.throw(error.json().error || 'Server error'));
+
   }
 }
