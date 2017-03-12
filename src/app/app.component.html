@@ -1,10 +1,11 @@
-<md-toolbar>{{title}}</md-toolbar>
+
+<md-toolbar color="primary">{{title}}</md-toolbar>
 <md-sidenav-container class="main">
   <md-sidenav #sidenav mode="side" opened="true">
-    <md-list>
-      <md-list-item>My Goal</md-list-item>
-      <md-list-item>All Goals</md-list-item>
-    </md-list>
+    <md-nav-list>
+      <md-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['goals']">My Goal</a></md-list-item>
+      <md-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['goals']">All Goals</a></md-list-item>
+    </md-nav-list>
   </md-sidenav>
   <router-outlet></router-outlet>
 </md-sidenav-container>

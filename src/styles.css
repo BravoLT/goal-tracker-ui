@@ -6,3 +6,8 @@ body {
     height: 100%;
     margin: 0;
 }
+
+.mat-nav-list .mat-list-item.active {
+    background-color: #673ab7;
+    color: rgba(255,255,255,.87);
+}
