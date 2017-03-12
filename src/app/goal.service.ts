@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Goal } from './goal/goal';
+import { Goal } from './goal';
 
 @Injectable()
 export class GoalService {
