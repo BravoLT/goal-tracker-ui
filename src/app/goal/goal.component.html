@@ -1,3 +1,21 @@
-<p>
-  goal works!
-</p>
+<h1>
+  <a (click)="goBack()"><md-icon>arrow_back</md-icon></a>
+  Goal
+</h1>
+<md-input-container>
+  <input mdInput type="text" placeholder="Description" value="My goal" />
+</md-input-container>
+<br />
+<md-input-container>
+  <input mdInput type="datetime-local" placeholder="Start Date" value="2017-03-01T13:00" />
+</md-input-container>
+<br />
+<md-input-container>
+  <input mdInput type="datetime-local" placeholder="Target Date" value="2017-03-31T13:00" />
+</md-input-container>
+<br />
+<md-select placeholder="Owner">
+  <md-option *ngFor="let owner of owners" value="goal.owner.id">
+    {{goal.owner.name}}
+  </md-option>
+</md-select>
