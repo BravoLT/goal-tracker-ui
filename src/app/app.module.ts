@@ -7,11 +7,13 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GoalListComponent } from './goal-list/goal-list.component';
+import { GoalComponent } from './goal/goal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GoalListComponent
+    GoalListComponent,
+    GoalComponent
   ],
   imports: [
     MaterialModule,
